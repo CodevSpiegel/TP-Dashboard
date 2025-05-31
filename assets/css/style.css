@@ -17,6 +17,7 @@ body {
     --Color-Tokens-Content-Dark-Primary: #000000;
     --Color-Tokens-Content-Dark-Secondary: #727272;
     --Color-Tokens-Content-Dark-Tertiary: #AFAFAF;
+    --GlobalColors-Neutral-50: #E4E4E4;
 
     /* Buttons */
     --bg-btn-done: #F0FEED;
@@ -50,6 +51,7 @@ main {
 
 .logo {
     background-color: var(--secondary-color, #E4E4E4);
+    /* --GlobalColors-Neutral-50: #E4E4E4; */
 }
 
 
