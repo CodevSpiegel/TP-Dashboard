@@ -116,7 +116,7 @@ main {
     gap: 16px;
 }
 
-.notif-msg {
+.notif-msg a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,6 +135,7 @@ main {
 
 .account-change select {
     border: none;
+    cursor: pointer;
 }
 
 
