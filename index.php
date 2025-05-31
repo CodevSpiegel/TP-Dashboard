@@ -148,60 +148,57 @@
             <div>Status</div>
             <div>Submit</div>
         </div>
+        <?php
+            include_once "./datas/datas.php";
+
+            $badge = "";
+            $submit = "upload";
+        ?>
+
+
+        <?php foreach ($assignments as $assignment) { ?>
+
         <div class="row">
-            <div>Testing the main app from here</div>
-            <div>User Research and Personas</div>
-            <div>July 1, 2024</div>
+            <div><?= $assignment['assignment_title'] ?></div>
+            <div><?= $assignment['course_lessons'] ?></div>
+            <div><?= $assignment['due_date'] ?></div>
+            <?php
+                if ($assignment['status'] == "Pending") {
+                    $badge = "pending";
+                }
+                else if ($assignment['status'] == "Progress") {
+                    $badge = "progress";
+                }
+                else {
+                    $badge = "done";
+                }
+            ?>
             <div class="status">
-                <div class="badge done">
+                <div class="badge <?= $badge ?>">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="4.3322" cy="4.41392" r="4.25792" fill="none"/>
                     </svg>
-                    <span>Done</span>
+                    <span><?= $assignment['status'] ?></span>
                 </div>
             </div>
             <div>
-                <span class="submit submitted">
-                    Submitted
+                <?php 
+                    if ($assignment['submit']) {
+                        $submit = "submitted";
+                    }
+                    else {
+                        $submit = "upload";
+                    }
+                ?>
+                <span class="submit <?= $submit ?>">
+                    <?= ucfirst($submit) ?>
                 </span>
             </div>
         </div>
-        <div class="row">
-            <div>Competitive Analysis Report</div>
-            <div>User Research and Personas</div>
-            <div>July 2, 2024</div>
-            <div class="status">
-                <div class="badge progress">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="4.3322" cy="4.41392" r="4.25792" fill="none"/>
-                    </svg>
-                    <span>Progress</span>
-                </div>
-            </div>
-            <div>
-                <span class="submit upload">
-                    Upload
-                </span>
-            </div>
-        </div>
-        <div class="row">
-            <div>Usability Testing and Feedback</div>
-            <div>User Research and Personas</div>
-            <div>July 6, 2024</div>
-            <div class="status">
-                <div class="badge pending">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="4.3322" cy="4.41392" r="4.25792" fill="none"/>
-                    </svg>
-                    <span>Pending</span>
-                </div>
-            </div>
-            <div>
-                <span class="submit upload">
-                    Upload
-                </span>
-            </div>
-        </div>
+
+        <?php } ?>
+
+
     </div>
 
      <div class="preview-footer">
