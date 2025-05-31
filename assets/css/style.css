@@ -73,8 +73,20 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(163, 247, 163);
+    width: 100%;
+    padding: 0 34px;
 }
+
+.topbar-left {
+    display: flex;
+    width: 334.607px;
+    padding: 9.295px 11.154px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+
 
 
 /*---- SIDEBAR BLOCK ----*/
@@ -87,14 +99,19 @@ main {
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    gap: 6px;
+    gap: 2px;
 }
 
 .sidebar nav ul li {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding: 8px;
     gap: 10px;
+}
+.sidebar nav ul li svg {
+    width: 16px;
+    height: 16px;
 }
 
 .sidebar nav ul li a {
@@ -108,6 +125,10 @@ main {
     font-weight: 500;
     line-height: 150%;
     color: #727272;
+}
+
+.sidebar nav ul li a:hover {
+    text-decoration: underline;
 }
 
 
