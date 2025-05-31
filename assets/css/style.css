@@ -17,7 +17,6 @@ body {
     --Color-Tokens-Content-Dark-Primary: #000000;
     --Color-Tokens-Content-Dark-Secondary: #727272;
     --Color-Tokens-Content-Dark-Tertiary: #AFAFAF;
-    --GlobalColors-Neutral-50: #E4E4E4;
 
     /* Buttons */
     --bg-btn-done: #F0FEED;
@@ -143,8 +142,8 @@ main {
 
 /*---- SIDEBAR BLOCK ----*/
 .sidebar {
-    margin-top: 32px;
-    padding: 0px 16px;
+    padding: 32px 16px;
+    background-color: var(--secondary-color, #E4E4E4);
 }
 
 .sidebar nav ul {
