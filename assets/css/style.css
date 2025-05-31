@@ -16,6 +16,7 @@ body {
     --Color-Tokens-Background-Secondary: #F9F9F9;
     --Color-Tokens-Content-Dark-Primary: #000000;
     --Color-Tokens-Content-Dark-Secondary: #727272;
+    --Color-Tokens-Content-Dark-Tertiary: #AFAFAF;
 
     /* Buttons */
     --bg-btn-done: #F0FEED;
@@ -79,11 +80,60 @@ main {
 
 .topbar-left {
     display: flex;
-    width: 334.607px;
-    padding: 9.295px 11.154px;
     justify-content: space-between;
     align-items: center;
-    flex-shrink: 0;
+    width: 336px;
+    padding: 10px 12px;
+    border: 1px solid #FF4B00;
+    border-radius: 4px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search span {
+    font-family: Inter;
+    font-size: 13.012px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--Color-Tokens-Content-Dark-Tertiary, #AFAFAF);
+}
+
+.search-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.notif-msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #E7EAE9;
+    border-radius: 8px;
+    color: #E7EAE9;
+}
+
+.account-change {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.account-change select {
+    border: none;
 }
 
 
