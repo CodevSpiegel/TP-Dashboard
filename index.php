@@ -148,15 +148,15 @@
             <div>Status</div>
             <div>Submit</div>
         </div>
+
         <?php
             include_once "./datas/datas.php";
 
             $badge = "";
-            $submit = "upload";
+            $submit = "upload"; // Si false, Par defaut "upload"
+
+            foreach ($assignments as $assignment) :
         ?>
-
-
-        <?php foreach ($assignments as $assignment) { ?>
 
         <div class="row">
             <div><?= $assignment['assignment_title'] ?></div>
@@ -196,7 +196,9 @@
             </div>
         </div>
 
-        <?php } ?>
+        <?php 
+            endforeach; 
+        ?>
 
 
     </div>
